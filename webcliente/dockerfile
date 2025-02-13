@@ -1,0 +1,8 @@
+#Imagen limpia de alpine que se utiliza para correr la aplicacion. En esencia un Linux con Java17
+FROM openjdk:17-jdk-alpine
+#Comando que copiara nuestra app dentro del contenedor
+COPY target/webcliente-1.jar webcliente-1.jar
+#Comando que se ejecutara dentro del contenedor
+ENTRYPOINT ["java","-jar","/webcliente-1.jar"]
+#Puerto que se expondra
+EXPOSE 8084
