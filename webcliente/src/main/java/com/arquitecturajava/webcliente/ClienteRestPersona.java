@@ -17,7 +17,7 @@ public class ClienteRestPersona {
 	public List<PersonaDto> listarPersonas() {
 
 		RestTemplate restTemplate = new RestTemplate();
-		ResponseEntity<PersonaDto[]> response = restTemplate.getForEntity("http://localhost:8083/personas",
+		ResponseEntity<PersonaDto[]> response = restTemplate.getForEntity("http://springbootservidor:8083/personas",
 				PersonaDto[].class);
 		return Arrays.asList(response.getBody());
 
